@@ -11,7 +11,7 @@ A Powershell Script to monitor the Hardware Encoding and Session Codecs in a Cit
 	Import-Module "C:\Test\Check-CVADSessionCodec.psm1" -Force
 	Check-CVADSessionCodec -ddc "Hostname Delivery Controller" -deliverygroup "Delivery Group"
 
-If the parameter '-ddc' isn't defined localhost will use as hostname for the Citrix Delivery Controller.
+If the parameter '-ddc' isn't defined, localhost will use as hostname for the Citrix Delivery Controller.
 
 ## Example Output:
 ![Example Output](https://raw.githubusercontent.com/zurstegen/Citrix-Check-Session-Codec/master/Example_Output.png)	
