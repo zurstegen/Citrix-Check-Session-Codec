@@ -5,6 +5,7 @@ A Powershell Script to monitor the Hardware Encoding and Session Codecs in a Cit
 ## Requirements:
 - Citrix Virtual Apps and Desktops SDK - Powershell Snapins
 - Allow Remote WMI requests on the VDAs
+- Allow Remote Powershell on the VDAs
 
 ## Usage:
 	Add-PSSnapin citrix*
