@@ -10,7 +10,10 @@ A Powershell Script to monitor the Hardware Encoding and Session Codecs in a Cit
 	Add-PSSnapin citrix*
 	Import-Module "C:\Test\Check-CVADSessionCodec.psm1" -Force
 	Check-CVADSessionCodec -deliverygroup "Test_Delivery_Group"
-	
+
+## Example Output:
+![Example Output](https://raw.githubusercontent.com/zurstegen/Citrix-Check-Session-Codec/master/Example_Output.png)	
+
 ## Disclaimer:
 Only with the following versions are tested:
 - NVIDIA vGPU 6.4
