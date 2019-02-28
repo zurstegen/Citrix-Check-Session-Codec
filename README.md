@@ -1,3 +1,5 @@
+# Citrix-Check-Session-Codec
+
 A Powershell Script to monitor the Hardware Encoding and Session Codecs in a Citrix Virtual Apps and Desktop environments with NVIDIA vGPU.
 
 ## Requirements:
@@ -20,4 +22,4 @@ Only with the following versions are tested:
 - Citrix XenApp 1808
 - Citrix XenApp 1811
 
-This soucre and the whole package comes without warranty. It ma or may not ham your computer. Please use with care. Any damage cannot be related back to the author. The source has been tested on a virtual environment.
+This soucre and the whole package comes without warranty. It may or may not ham your computer. Please use with care. Any damage cannot be related back to the author. The source has been tested on a virtual environment.
