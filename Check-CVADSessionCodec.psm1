@@ -2,16 +2,18 @@
 #                              Check Citrix Virtual Apps and Virtual Desktop Session Codec and Encoding                                            #
 ####################################################################################################################################################
 #                                                                                                                                                  #
-#          Created:         Tobias Zurstegen, zurstegen.de                                                                                         #
-#          Last Modified:   25.02.2019                                                                                                             #
-#          Description:     Check Hardware Encoding and Codec per Citrix Delivery Group                                                            #
-#          Limitation:      Only tested with Citrix VirtualDesktop 7.15.2, 7.18 and Citrix Virtual Apps 1808, 1811                                 #
-#          Example:         Check-CVADSessionCodec -deliverygroup 'deliverygroupname'                                                              #
+#             Created:         Tobias Zurstegen, zurstegen.de                                                                                      #
+#             Last Modified:   25.02.2019                                                                                                          #
+#             Description:     Check Hardware Encoding and Codec per Citrix Delivery Group                                                         #
+#             Limitation:      Only tested with Citrix VirtualDesktop 7.15.2, 7.18 and Citrix Virtual Apps 1808, 1811                              #
+#             Example:         Check-CVADSessionCodec -ddc "Delivery Controller Hostname" -deliverygroup 'deliverygroupname'                       #
+#                              If no Delivery Controller hostname defined localhost will use automatically                                         #
 #                                                                                                                                                  #                                                          #
 ####################################################################################################################################################
 
 function Check-CVADSessionCodec{
     param(
+        $ddc,
         [parameter(Mandatory=$true)]
         [ValidateNotNullOrEmpty()]$deliverygroup
         )
@@ -31,6 +33,7 @@ function Check-CVADSessionCodec{
 
 
     #Get all active and no disconnected sessions per Delivery Group
+    Get-BrokerSite -AdminAddress $ddc
     $computername = Get-BrokerSession -DesktopGroupName $deliverygroup -SessionState Active
 
     ##Check if Single or MultiSession
