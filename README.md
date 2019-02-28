@@ -1,3 +1,5 @@
+#Citrix-Check-Session-Codec
+
 A Powershell Script to monitor the Hardware Encoding and Session Codecs in a Citrix Virtual Apps and Desktop environments with NVIDIA vGPU.
 
 ## Requirements:
